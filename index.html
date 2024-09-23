@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>Kandydat na Przewodniczącego Szkoły</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader-wrapper">
+        <span class="loader"></span>
+    </div>
+    
+    <!-- Zawartość strony -->
+    <div class="content">
+        <header>
+            <div class="container">
+                <h1>Kandydat na Przewodniczącego Szkoły</h1>
+                <h2>Krystian Szlaps</h2>
+            </div>
+        </header>
+
+        <section class="about">
+            <div class="container">
+                <h3>O Mnie</h3>
+                <p>Siema! Nazywam się Krystian Szlaps i jestem uczniem klasy 4TI. Od lat aktywnie angażuję się w życie naszej szkoły, m.in. poprzez godne reprezentowanie barw naszej szkoły w róznorakich zawodach sportowych, współudział apeli i pomoc na zapleczu technicznym na różnych wydarzeniach szkolnych oraz "pomoc sytuacyjna".</p> <br>
+            <p>Kandyduję na przewodniczącego szkoły, ponieważ zależy mi na tym, aby nasza szkoła była jeszcze lepszym miejscem do nauki i rozwoju. Wierzę, że razem możemy wprowadzić wiele pozytywnych zmian.</p> <br>
+            <p>Chciałbym być przewodniczącym, który słucha głosu każdego ucznia. Dlatego planuję regularnie rozmawiać z Wami i wspólnie pracować nad tym. Będę waszym pośrednikiem w kontaktach uczeń-nauczyciel i wyżej. Dzięki nam, nasza szkoła będzie lepszym miejscem, w której każdy będzie czuł się dobrze.</p>
+            </div>
+        </section>
+
+        <section class="goals">
+            <div class="container">
+                <h3>Co chciałbym wprowadzić:</h3>
+                <ul>
+                    <li>Szkolne turnieje sportowe (koszykówka, piłka nożna, siatkówka i inne).</li>
+                    <li>Więcej kanap na korytarzu.</li>
+                    <li>Szkolne Mam Talent.</li>
+                    <li>Spotkania z celebrytami.</li>
+                    <li>Skrzynka z waszymi pomysłami.</li>
+                    <li>Reaktywacja szkolnego TikToka.</li>
+                    <li>Odwrócone belfry.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h3>Oddaj głos na Szlapsa!</h3>
+                <p>Jak to mówi klasyk: ,,Bo kluczem do sukcesu jesteś TY, a my wskażemy Ci właściwe drzwi". Głosujcie na mnie, jeśli chcecie, aby Wasz głos był słyszalny!</p>
+                <a href="javascript:void(0);" class="vote-button" onclick="scrollToTop()">Przeniosę cię na górę</a>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <a target="_blank" href="https://www.facebook.com/krystianszlaps">Kliknij tutaj, aby przejść na mojego Facebooka i się ze mną skontaktować :D</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                const loader = document.querySelector('.loader-wrapper');
+                loader.classList.add('fade-out'); // Dodaj klasę do zanikania
+
+                // Po zakończeniu animacji zanikania, usuwamy loader z DOM
+                setTimeout(function() {
+                    loader.style.display = 'none'; // Ukryj loader
+                    document.querySelector('.content').classList.add('visible'); // Pokaż zawartość
+                }, 1000); // Czas trwania animacji zanikania
+            }, 1000); // Czas przed rozpoczęciem ukrywania loadera
+        };
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Płynne przewijanie
+            });
+        }
+    </script>
+    
+</body>
+</html>
